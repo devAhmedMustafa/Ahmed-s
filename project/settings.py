@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-(boy31pm^d6tz&v#jr1&j$%_td3=&5cnnzs6hx_n8&^3tq4^0w
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://web-production-2720.up.railway.app']
+ALLOWED_HOSTS = ['*']
 CSRF_TRUSTED_ORIGINS = ['https://web-production-2720.up.railway.app']
 
 # Application definition
