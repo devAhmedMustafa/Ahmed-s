@@ -1,0 +1,56 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'stylesheets/home.css' %}">
+
+<div class="about_me">
+
+    <div class="blob"></div>
+
+    <section>
+        <p>
+            Hi,<br>I'm <span>Ahmed</span><br>Web Developer.
+        </p>
+        <button id="msg">
+            Leave a message
+        </button>
+    </section>
+
+</div>
+
+<div class="message" id="msgfield">
+    <form>
+        <label for="text_field">Write what you want</label>
+        <textarea type="text" class="text_field" id="text_field"></textarea>
+    </form>
+</div>
+
+<div class="my_social_media">
+
+    <img src="{% static 'svg/facebook.svg' %}">
+    <img src="{% static 'svg/instagram.svg' %}">
+    <img src="{% static 'svg/twitter.svg' %}">
+    <img src="{% static 'svg/whatsapp.svg' %}">
+    <img src="{% static 'svg/linkedin.svg' %}">
+    <img src="{% static 'svg/snapchat.svg' %}">
+    
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+
+<script>
+
+    leavemsg = document.querySelector('#msg');
+    msgfield = document.querySelector('#msgfield');
+
+    leavemsg.addEventListener('click', function () {
+        msgfield.style.display = 'block';
+    })
+
+</script>
+
+{% endblock %}

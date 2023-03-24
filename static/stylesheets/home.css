@@ -1,0 +1,150 @@
+:root{
+    --radius-1: 40%;
+    --radius-2: 70%;
+    --radius-3: 70%;
+    --radius-4: 10%;
+    --radius-5: 60%;
+    --radius-6: 40%;
+    --radius-7: 60%;
+    --radius-8: 40%;
+}
+
+.about_me {
+    display: flex;
+    flex-direction: row;
+    border-radius: 20px;
+}
+.blob{
+    width: 460px;
+    height: 460px;
+    border-radius: var(--radius-1) var(--radius-2) var(--radius-3) var(--radius-4) / var(--radius-5) var(--radius-6) var(--radius-7) var(--radius-8);
+    background-image: url("../images/photo_2023-02-03_14-32-25.jpg");
+    background-size: cover;
+    box-shadow: -20px 20px 90px black;
+    box-shadow: 20px 20px 0px rgba(235, 235, 235, 0.74);
+    z-index: -99;
+}
+
+
+.img, .about_me section{
+    margin: 50px;
+}
+
+.img h1{
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: whitesmoke;
+    font-size: 60px;
+}
+
+.about_me section{
+    line-height: 50px;
+    font-size: 35px;
+}
+
+.about_me section span{
+    background: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.my_social_media{
+    margin: 15px;
+}
+
+.my_social_media img{
+    animation: out-scaling 0.5s ease-in-out;
+    width: 40px;
+    margin: 10px;
+    cursor: pointer;
+    padding:3px;
+    border-radius: 2px;
+}
+
+.my_social_media img:hover{
+    animation: scaling 300ms ease-in-out;
+    width: 50px;
+    border-bottom: 2px solid #ECA1FE;
+}
+
+@keyframes scaling {
+
+    from{width:40px; border-bottom: none; font-size: 18px;}
+    to{width: 50px; border-bottom: 2px solid #ECA1FE; font-size: 22px;}
+
+}
+
+@keyframes out-scaling {
+
+    from{width:50px; border-bottom: 2px solid #ECA1FE; font-size: 22px;}
+    to{width: 40px; border-bottom: none; font-size: 18px;}
+
+}
+
+button {
+    position: relative;
+    background: none;
+    border: solid 1px #121212;
+    transition: linear 250ms;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button:is(:hover,:focus) {
+    color: #fff;
+}
+
+button::after {
+    position: absolute;
+    content: '';
+    inset: 0;
+    z-index: -1;
+    background-color: #121212;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: linear 250ms;
+}
+
+button:is(:hover, :focus)::after {
+    transform: scale(1);
+}
+
+.message {
+    margin: 30px;
+    display: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+form label{
+    margin: 10px;
+    font-size: 20px;
+}
+
+.text_field{
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.66);
+    border: 1px solid black;
+    border-radius: 2px;
+    word-wrap: break-word;
+    word-break: break-all;
+    height: auto;
+}
+
+.text_field:focus{
+    outline: none;
+}
+
+@media (max-width: 900px) {
+    .about_me{
+        flex-direction: column;
+    }
+}

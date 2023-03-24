@@ -1,0 +1,65 @@
+*{
+    font-family: "JetBrains Mono";
+    font-weight: bold;
+}
+
+body{
+    background-image: url("../images/wave-textures-white-background-vector_53876-60286.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.header .list{
+    margin-left: auto;
+}
+
+.header .list a{
+    animation: out-scaling 300ms ease-in-out;
+    margin: 20px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.header .list a:hover{
+    animation: scaling 300ms ease-in-out;
+    border-bottom: 2px solid #ECA1FE;
+    font-size: 22px;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@keyframes scaling {
+
+    from{width:40px; border-bottom: none; font-size: 18px;}
+    to{width: 50px; border-bottom: 2px solid #ECA1FE; font-size: 22px;}
+
+}
+
+@keyframes out-scaling {
+
+    from{width:50px; border-bottom: 2px solid #ECA1FE; font-size: 22px;}
+    to{width: 40px; border-bottom: none; font-size: 18px;}
+
+}
+
+@media (max-width: 600px){
+    .header{
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+    }
+
+    .list{
+        margin: auto;
+    }
+}
