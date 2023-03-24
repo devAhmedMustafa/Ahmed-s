@@ -148,3 +148,16 @@ form label{
         flex-direction: column;
     }
 }
+
+@media (max-width: 700px){
+    .blob{
+        width: 380px;
+        height: 450px;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    .my_social_media img{
+        width: 25px;
+    }
+}

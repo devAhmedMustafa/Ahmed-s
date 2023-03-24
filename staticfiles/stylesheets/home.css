@@ -18,9 +18,10 @@
     width: 460px;
     height: 460px;
     border-radius: var(--radius-1) var(--radius-2) var(--radius-3) var(--radius-4) / var(--radius-5) var(--radius-6) var(--radius-7) var(--radius-8);
-    background-image: url("photo_2023-02-03_14-32-25.jpg");
+    background-image: url("../images/photo_2023-02-03_14-32-25.jpg");
     background-size: cover;
     box-shadow: -20px 20px 90px black;
+    box-shadow: 20px 20px 0px rgba(235, 235, 235, 0.74);
     z-index: -99;
 }
 
@@ -145,5 +146,18 @@ form label{
 @media (max-width: 900px) {
     .about_me{
         flex-direction: column;
+    }
+}
+
+@media (max-width: 700px){
+    .blob{
+        width: 380px;
+        height: 450px;
+        border-radius: 10px;
+        margin: auto;
+    }
+
+    .my_social_media img{
+        width: 25px;
     }
 }
