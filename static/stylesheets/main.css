@@ -76,7 +76,7 @@ body{
         flex-direction: row;
     }
     .list a{
-        font-size: 12px;
-        margin: 10px;
+        font-size: 10px;
+        margin: 3px;
     }
 }
