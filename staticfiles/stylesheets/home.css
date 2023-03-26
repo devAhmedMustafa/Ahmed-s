@@ -173,11 +173,11 @@ button:is(:hover, :focus)::after {
     }
 
     .blob{
-        width: 350px;
-        height: 420px;
+        width: 300px;
+        height: 380px;
         border-radius: 12px;
         margin: auto;
-        box-shadow: none;
+        box-shadow: 5px 5px 50px rgb(43, 43, 43);
     }
 
     .my_social_media img{

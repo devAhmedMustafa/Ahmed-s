@@ -52,7 +52,7 @@ body{
 @keyframes out-scaling {
 
     from{border-bottom: 2px solid #ECA1FE; font-size: 22px;}
-    to{border-bottom: none; font-size: 18px;}
+    to{border-bottom: none; font-size: var(--list_a);}
 
 }
 
