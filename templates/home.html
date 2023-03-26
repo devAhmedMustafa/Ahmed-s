@@ -21,20 +21,18 @@
 </div>
 
 <div class="message" id="msgfield">
-    <form>
         <label for="text_field">Write what you want</label>
         <textarea type="text" class="text_field" id="text_field"></textarea>
-    </form>
+        <button id="send_msg">Send</button>
 </div>
 
 <div class="my_social_media">
 
-    <img src="{% static 'svg/facebook.svg' %}">
-    <img src="{% static 'svg/instagram.svg' %}">
-    <img src="{% static 'svg/twitter.svg' %}">
-    <img src="{% static 'svg/whatsapp.svg' %}">
-    <img src="{% static 'svg/linkedin.svg' %}">
-    <img src="{% static 'svg/snapchat.svg' %}">
+    <a href="https://www.facebook.com/ahmed1.mustafa6" target='_blank'><img src="{% static 'svg/facebook.svg' %}"></a>
+    <a href="https://www.instagram.com/ahmedmustafa.96/" target='_blank'><img src="{% static 'svg/instagram.svg' %}"></a>
+    <a href="https://twitter.com/meAhmedMustafa" target='_blank'><img src="{% static 'svg/twitter.svg' %}"></a>
+    <a href="https://github.com/devAhmedMustafa" target='_blank'><img src="{% static 'svg/github.svg' %}"></a>
+    <a href="https://www.linkedin.com/in/ahmed-mustafa-67a224250/" target='_blank'><img src="{% static 'svg/linkedin.svg' %}"></a>
     
 </div>
 
@@ -42,15 +40,6 @@
 
 {% block javascript %}
 
-<script>
-
-    leavemsg = document.querySelector('#msg');
-    msgfield = document.querySelector('#msgfield');
-
-    leavemsg.addEventListener('click', function () {
-        msgfield.style.display = 'block';
-    })
-
-</script>
+<script src="{% static 'js_scripts/message_send.js' %}"></script>
 
 {% endblock %}

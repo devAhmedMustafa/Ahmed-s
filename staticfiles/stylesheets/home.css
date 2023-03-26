@@ -9,6 +9,10 @@
     --radius-8: 40%;
 }
 
+:root{
+    --icons: 40px;
+}
+
 .about_me {
     display: flex;
     flex-direction: row;
@@ -56,8 +60,8 @@
 }
 
 .my_social_media img{
-    animation: out-scaling 0.5s ease-in-out;
-    width: 40px;
+    animation: width-in 0.5s ease-in-out, border-in 300ms ease-in-out;
+    width: var(--icons);
     margin: 10px;
     cursor: pointer;
     padding:3px;
@@ -65,23 +69,32 @@
 }
 
 .my_social_media img:hover{
-    animation: scaling 300ms ease-in-out;
+    animation: width-out 300ms ease-in-out, border-out 300ms ease-in-out;
     width: 50px;
     border-bottom: 2px solid #ECA1FE;
 }
+@keyframes width-out {
 
-@keyframes scaling {
-
-    from{width:40px; border-bottom: none; font-size: 18px;}
-    to{width: 50px; border-bottom: 2px solid #ECA1FE; font-size: 22px;}
+    from{width:var(--icons);}
+    to{width: 50px;}
 
 }
 
-@keyframes out-scaling {
+@keyframes width-in {
 
-    from{width:50px; border-bottom: 2px solid #ECA1FE; font-size: 22px;}
-    to{width: 40px; border-bottom: none; font-size: 18px;}
+    from{width:50px;}
+    to{width: var(--icons);}
 
+}
+
+@keyframes border-out {
+    from{border-bottom: none;}
+    to{border-bottom: 2px solid #ECA1FE;}
+}
+
+@keyframes border-in {
+    from{border-bottom: 2px solid #ECA1FE;}
+    to{border-bottom: none;}
 }
 
 button {
@@ -116,14 +129,11 @@ button:is(:hover, :focus)::after {
 .message {
     margin: 30px;
     display: none;
-}
-
-form{
-    display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
-form label{
+.message label{
     margin: 10px;
     font-size: 20px;
 }
@@ -143,6 +153,13 @@ form label{
     outline: none;
 }
 
+#send_msg{
+    width: 50%;
+    padding: 8px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 @media (max-width: 900px) {
     .about_me{
         flex-direction: column;
@@ -150,14 +167,21 @@ form label{
 }
 
 @media (max-width: 700px){
+
+    :root{
+        --icons: 30px;
+    }
+
     .blob{
-        width: 380px;
-        height: 450px;
-        border-radius: 10px;
+        width: 350px;
+        height: 420px;
+        border-radius: 12px;
         margin: auto;
+        box-shadow: none;
     }
 
     .my_social_media img{
-        width: 25px;
+        width: var(--icons);
+        margin: 5px;
     }
 }
