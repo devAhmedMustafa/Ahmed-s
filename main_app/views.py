@@ -13,7 +13,8 @@ def send_message(request):
    
     message = request.GET['message']
     
-    Message.objects.create(message=message)
+    x = Message(content=message)
+    x.save()
 
     data = {
         'message':message
