@@ -3,6 +3,10 @@
     font-weight: bold;
 }
 
+:root{
+    --list_a: 18px;
+}
+
 body{
     background-image: url("../images/wave-textures-white-background-vector_53876-60286.png");
     background-size: cover;
@@ -40,21 +44,21 @@ body{
 
 @keyframes scaling {
 
-    from{width:40px; border-bottom: none; font-size: 18px;}
-    to{width: 50px; border-bottom: 2px solid #ECA1FE; font-size: 22px;}
+    from{border-bottom: none; font-size: var(--list_a);}
+    to{border-bottom: 2px solid #ECA1FE; font-size: 22px;}
 
 }
 
 @keyframes out-scaling {
 
-    from{width:50px; border-bottom: 2px solid #ECA1FE; font-size: 22px;}
-    to{width: 40px; border-bottom: none; font-size: 18px;}
+    from{border-bottom: 2px solid #ECA1FE; font-size: 22px;}
+    to{border-bottom: none; font-size: 18px;}
 
 }
 
 @media (max-width: 700px){
     :root{
-        --list_a: 15px;
+        --list_a: 13px;
     }
     body{
         background-image: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
@@ -65,17 +69,16 @@ body{
         margin-bottom: 20px;
         background-image: url("../images/wave-textures-white-background-vector_53876-60286.png");
         background-size: cover;
-        background-repeat: no-repeat;
-        border-bottom: 1px solid rgb(177, 177, 177);
+        border-bottom: 1px solid rgb(94, 94, 94);
     }
-
+    
     .list{
-        margin: auto;
+        width: 100%;
         display: flex;
         flex-direction: row;
     }
     .list a{
-        font-size: 15px;
-        margin: 15px;
+        font-size: var(--list_a);
+        margin: 5px;
     }
 }
