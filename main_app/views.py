@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import Message
+from .models import Message, Skill, SkillCategory
 from django.http import JsonResponse
 import json
 
@@ -21,3 +21,10 @@ def send_message(request):
     }
 
     return JsonResponse(data)
+
+def skills(request):
+
+    categories = SkillCategory.objects.all()
+    skills = Skill.objects.all()
+
+    return render(request, 'skills.html', {'categories': categories, 'skills':skills})

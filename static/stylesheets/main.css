@@ -28,6 +28,8 @@ body{
     margin: 20px;
     cursor: pointer;
     font-size: 18px;
+    color: black;
+    text-decoration-line: none;
 }
 
 .header .list a:hover{

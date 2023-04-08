@@ -6,15 +6,16 @@
 <link rel="stylesheet" href="{% static 'stylesheets/normalize.css' %}">
 <link rel="stylesheet" href="{% static 'stylesheets/main.css' %}">
 <meta name='viewport' content="width=device-width, initial-scale=1.0">
+<link rel="icon" type="image/x-icon" href="{% static 'images/MyLogo.ico' %}">
 
 <div class="container">
 
     <div class="header">
         <img src="{% static 'images/MyLogo.png' %}" width="140px">
         <div class="list">
-            <a>Home</a>
+            <a href="{% url 'home' %}">Home</a>
             <a>About</a>
-            <a>Skills</a>
+            <a href="{% url 'skills' %}">Skills</a>
             <a>Projects</a>
         </div>
     </div>

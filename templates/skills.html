@@ -1,0 +1,40 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'stylesheets/skills.css' %}">
+
+<h1>Skills</h1>
+
+    {% for category in categories %}
+    <div class='category'>
+        <h2>{{category.name}}</h2>
+        <hr>
+        <div class="skills">
+            {% for skill in skills %}
+
+            {% if skill.category == category %}
+
+            <div class="skill">
+                {{skill.name}}
+                <img src="{{skill.image.url}}">
+                {{skill.perc}}%
+                <section class='rate_box'><input type="number" style="display:none" value={{skill.perc}}></section>
+            </div>
+
+            {% endif %}
+
+            {% endfor %}
+        
+        </div>
+    </div>
+    {% endfor %}
+
+{% endblock %}
+
+{% block javascript %}
+
+<script src="{% static 'js_scripts/skill_rate.js' %}"></script>
+
+{% endblock %}

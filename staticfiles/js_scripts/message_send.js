@@ -17,6 +17,7 @@ sendBtn.addEventListener('click', function () {
         $.ajax({
             url: '/send_msg/',
             data: {'message': textField.value},
+            dataType: 'json',
             success: function(data){
                 sendBtn.style.backgroundColor = 'green';
                 sendBtn.innerHTML = 'Sent';
