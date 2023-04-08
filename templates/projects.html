@@ -1,0 +1,28 @@
+{% extends 'main.html' %}
+{% load static %}
+
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'stylesheets/projects.css' %}">
+
+<div class="projects">
+
+    <div class="wuzzuf iframe">
+        <a href="https://wuzzuf-data-fetch-production.up.railway.app/" target="_blank" class='frame_title'><img src='/static/images/Wuzzuf-Logo.png'></a>
+        <iframe src="https://wuzzuf-data-fetch-production.up.railway.app/"></iframe>
+    </div>
+
+    <div class="felfel_jewelry iframe">
+        <a href="https://jewelry-store-production-fca3.up.railway.app/" target="_blank" class='frame_title'><img src='/static/images/Logo.png' width='120px'></a>
+        <iframe src="https://jewelry-store-production-fca3.up.railway.app/"></iframe>
+    </div>
+
+</div>
+
+{% endblock %}
+
+{% block javascript %}
+
+<script src="{% static 'js_scripts/message_send.js' %}"></script>
+
+{% endblock %}
