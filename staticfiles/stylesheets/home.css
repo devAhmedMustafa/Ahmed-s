@@ -13,11 +13,12 @@
     --icons: 40px;
 }
 
-.about_me {
+.introduction {
     display: flex;
     flex-direction: row;
     border-radius: 20px;
 }
+
 .blob{
     width: 460px;
     height: 460px;
@@ -25,12 +26,12 @@
     background-image: url("../images/photo_2023-02-03_14-32-25.jpg");
     background-size: cover;
     box-shadow: -20px 20px 90px black;
-    box-shadow: 20px 20px 0px rgba(235, 235, 235, 0.74);
+    /* box-shadow: 5px 5px 2px rgba(235, 235, 235, 0.44); */
     z-index: -99;
 }
 
 
-.img, .about_me section{
+.img, .introduction section{
     margin: 50px;
 }
 
@@ -44,12 +45,12 @@
     font-size: 60px;
 }
 
-.about_me section{
+.introduction section{
     line-height: 50px;
     font-size: 35px;
 }
 
-.about_me section span{
+.introduction section span{
     background: linear-gradient(-225deg, #5271C4 0%, #B19FFF 48%, #ECA1FE 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -161,7 +162,7 @@ button:is(:hover, :focus)::after {
 }
 
 @media (max-width: 900px) {
-    .about_me{
+    .introduction{
         flex-direction: column;
     }
 }

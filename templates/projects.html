@@ -1,30 +1,26 @@
-{% extends 'main.html' %}
 {% load static %}
 
-{% block title %}<title>Ahmed Mustafa | Projects</title>{% endblock %}
-
-{% block content %}
-
-<link rel="stylesheet" href="{% static 'stylesheets/projects.css' %}">
+<link rel="stylesheet" href="{% static 'stylesheets/projects_box.css' %}">
 
 <div class="projects">
 
-    <div class="wuzzuf iframe">
-        <a href="https://wuzzuf-data-fetch-production.up.railway.app/" target="_blank" class='frame_title'><img src='/static/images/Wuzzuf-Logo.png'></a>
-        <iframe src="https://wuzzuf-data-fetch-production.up.railway.app/"></iframe>
+    <h2>
+        Here some of my projects.
+    </h2>
+
+    <div class="felfel project">
+        <h4>I build a jewelry store website with PostgreSQL database<br></h4>
+        <a href="https://jewelry-store-production-fca3.up.railway.app/" target="_blank"><img src='../static/images/Logo.png' width='120px'></a>
     </div>
 
-    <div class="felfel_jewelry iframe">
-        <a href="https://jewelry-store-production-fca3.up.railway.app/" target="_blank" class='frame_title'><img src='/static/images/Logo.png' width='120px'></a>
-        <iframe src="https://jewelry-store-production-fca3.up.railway.app/"></iframe>
+    <div class="wuzzuf project">
+        <h4>I know well about web scrapers and made some web scraping scripts, So I built one of these scripts as a website, Wuzzuf, The function of the website is to fetch data of the wuzzuf website then turn it to a csv file</h4>
+        <a href="https://wuzzuf-data-fetch-production.up.railway.app/" target="_blank"><img src='../static/images/Wuzzuf-Logo.png'></a>
+    </div>
+
+    <div class="solar_tracker project">
+        <h3>Here's another</h3>
+        <p>I built a solar / light tracker with my team for out school project, my main role was coding Arduino microcontroller and electronics things</p>
     </div>
 
 </div>
-
-{% endblock %}
-
-{% block javascript %}
-
-<script src="{% static 'js_scripts/message_send.js' %}"></script>
-
-{% endblock %}

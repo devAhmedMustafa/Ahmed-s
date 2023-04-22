@@ -14,16 +14,6 @@
 
 <div class="container">
 
-    <div class="header">
-        <img src="{% static 'images/MyLogo.png' %}" width="140px">
-        <div class="list">
-            <a href="{% url 'home' %}">Home</a>
-            <a>About</a>
-            <a href="{% url 'skills' %}">Skills</a>
-            <a href="{% url 'projects' %}">Projects</a>
-        </div>
-    </div>
-
     <div class="content">
         {% block content %}
         {% endblock %}

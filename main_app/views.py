@@ -27,6 +27,7 @@ def skills(request):
     categories = SkillCategory.objects.all()
     skills = Skill.objects.all()
 
+
     return render(request, 'skills.html', {'categories': categories, 'skills':skills})
 
 def projects(request):

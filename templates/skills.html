@@ -1,42 +1,57 @@
-{% extends 'main.html' %}
 {% load static %}
+<link rel="stylesheet" href="{% static 'stylesheets/skills_box.css' %}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
-{% block title %}<title>Ahmed Mustafa | Skills</title>{% endblock %}
+<div class="skills">
+    <h3>In my journey with this computer, I've gained a combine of skills<br>
+    These are some of them</h3>
 
-{% block content %}
+    <figure class="front-end">
+        <figcaption>
+            <i class="bi bi-easel3-fill"></i>
+            <span>Front End</span>
+        </figcaption>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+        </ul>
+    </figure>
 
-<link rel="stylesheet" href="{% static 'stylesheets/skills.css' %}">
+    <figure class="back-end">
+        <figcaption>
+            <i class="bi bi-terminal-fill"></i>
+            <span>Back End</span>
+        </figcaption>
+        <ul>
+            <li>Django</li>
+            <li>REST APIs</li>
+        </ul>
+    </figure>
 
-<h1>Skills</h1>
+    <figure class="database">
+        <figcaption>
+            <i class="bi bi-database-fill"></i>
+            <span>Database</span>
+        </figcaption>
+        <ul>
+            <li>PostgreSQL</li>
+            <li>MongoDB</li>
+        </ul>
+    </figure>
 
-    {% for category in categories %}
-    <div class='category'>
-        <h2>{{category.name}}</h2>
-        <hr>
-        <div class="skills">
-            {% for skill in skills %}
-
-            {% if skill.category == category %}
-
-            <div class="skill">
-                {{skill.name}}
-                <img src="{{skill.image.url}}">
-                {{skill.perc}}%
-                <section class='rate_box'><input type="number" style="display:none" value={{skill.perc}}></section>
-            </div>
-
-            {% endif %}
-
-            {% endfor %}
-        
+    <div class="other_skills">
+        <span>
+            <h3>That's not everything</h3>
+            <h4>I got some knowledge in</h4>
+        </span>
+        <div class="slides">
+            <section class="c"><h1>C</h1></section>
+            <section class="cpp"><h1>C++</h1></section>
+            <section class="ds"><h1>DATA STRUCTURES</h1></section>
+            <section class="nginx"><h1>NGINX</h1></section>
         </div>
     </div>
-    {% endfor %}
-
-{% endblock %}
-
-{% block javascript %}
-
-<script src="{% static 'js_scripts/skill_rate.js' %}"></script>
-
-{% endblock %}
+    
+</div>
