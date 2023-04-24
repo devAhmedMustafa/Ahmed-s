@@ -76,11 +76,7 @@ ul li{
     grid-gap: 10px;
 }
 
-.other_skills section{
-    background:  linear-gradient(
-        rgba(24, 24, 24, 0.4), 
-        rgba(24, 24, 24, 0.4)
-    );
+.other_skills .slides section{
     position: relative;
     display: flex;
     align-items: center;
@@ -94,13 +90,20 @@ ul li{
 }
 
 .other_skills .c{
-    background: url("../images/memes/images\ \(1\).jpeg");
+    background:linear-gradient(
+        rgba(24, 24, 24, 0.4), 
+        rgba(24, 24, 24, 0.4)
+    ), url("../images/memes/images\ \(1\).jpeg");
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.cpp, .ds, .nginx{
-    background: url("../images/memes/IMG_20230421_154148.jpg");
+.other_skills .cpp,.other_skills .ds,.other_skills .nginx{
+    background:  linear-gradient(
+        rgba(24, 24, 24, 0.4), 
+        rgba(24, 24, 24, 0.4)
+    ),
+    url("../images/memes/IMG_20230421_154652.jpg");
     background-repeat: no-repeat;
     background-size: cover;
 }
