@@ -3,6 +3,7 @@
     "development"
   ],
   "hints": {
+    "disown-opener": "off",
     "axe/text-alternatives": [
       "default",
       {
@@ -14,7 +15,6 @@
       {
         "link-name": "off"
       }
-    ],
-    "disown-opener": "off"
+    ]
   }
 }
